@@ -1,7 +1,7 @@
 .product-carousel-sec {
   background-color: #fff;
   padding: 15px;
-  &.sty-1{
+  &.sty-1 {
     background-color: #f4fbff;
   }
   .head-sec {
@@ -59,8 +59,12 @@
         opacity: 0.35;
       }
     }
+
     .slick-list {
       .slick-track {
+        .slick-slide > div {
+          padding: 5px;
+        }
         .slick-slide > div > div {
           display: flex !important;
           justify-content: center;
@@ -68,6 +72,7 @@
         }
       }
     }
+
     .slick-dots {
       position: absolute;
       bottom: -20px;

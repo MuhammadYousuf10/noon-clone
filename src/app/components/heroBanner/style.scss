@@ -3,10 +3,18 @@
   justify-content: space-between;
   align-items: center;
   height: 210px;
+  @media (max-width: 991px) {
+    height: auto;
+    flex-direction: column;
+  }
   .right-sec {
     max-width: 67%;
     flex: 0 0 67%;
     position: relative;
+    @media (max-width: 991px) {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
     .custom-arrow {
       position: absolute;
       top: 50%;
@@ -52,7 +60,7 @@
         background-color: #e2e5f1;
         box-shadow: 0 0 1px #ccc;
         border-radius: 50px;
-        &.slick-active{
+        &.slick-active {
           background-color: #feee00;
         }
         button {
@@ -64,5 +72,9 @@
   .left-sec {
     max-width: 32.5%;
     flex: 0 0 32.5%;
+    @media (max-width: 991px) {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
   }
 }

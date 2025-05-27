@@ -25,3 +25,21 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.container {
+  max-width: 1504px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  &.custom {
+    max-width: 1579px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+  }
+  &.container--modified {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 1820px;
+    margin: 0 auto;
+  }
+}

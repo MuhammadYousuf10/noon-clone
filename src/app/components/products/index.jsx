@@ -5,7 +5,7 @@ import "../products/style.scss";
 const Products = ({ heading, products, deal, column }) => {
   return (
     <Fragment>
-      <div className="products-sec">
+      <div className={`products-sec ${column ? "sty-1" : ""}`}>
         <div className="head-sec">
           <div className="text-[24px] font-bold text-black">{heading}</div>
           {deal && <div className="tag">All Deals</div>}

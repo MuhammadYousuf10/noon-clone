@@ -4,6 +4,14 @@
   padding: 15px;
   background-color: #ffffff;
   margin: 15px 0;
+  @media (max-width: 991px) {
+    max-width: 50%;
+    flex: 0 0 50%;
+    &.sty-1 {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
   .head-sec {
     display: flex;
     justify-content: space-between;
@@ -35,6 +43,13 @@
     .item {
       max-width: 48%;
       flex: 0 0 48%;
+      @media (max-width: 1300px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 }

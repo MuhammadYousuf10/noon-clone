@@ -17,7 +17,13 @@ export default function HomePage() {
       <Header />
       <Navbar />
       <div className="container mx-auto px-4">
-        <Coupons />
+        <Coupons
+          imageUrl={
+            "https://f.nooncdn.com/mpcms/EN0001/assets/37298fc1-69ca-4033-a437-022ac938a465.gif"
+          }
+          imageWidth={1000}
+          imageHeight={80}
+        />
         <HeroBanner />
         <CategoryIcons />
         <div className="flex justify-around flex-wrap">
@@ -31,8 +37,13 @@ export default function HomePage() {
             />
           ))}
         </div>
-        {/* <ProductsCarousel carouselProductsData={productsImagesCarousal} />
-        <ProductsCarousel carouselProductsData={productsImagesCarousal1} /> */}
+        <Coupons
+          imageUrl={
+            "https://f.nooncdn.com/ads/banner-1440x1440/English 1440 x 200.1747304953.379195.png"
+          }
+          imageWidth={1000}
+          imageHeight={195}
+        />
         <ProductsCarousel
           carouselProductsData={productsImagesCarousal}
           heading="Maximize your savings"
@@ -40,7 +51,6 @@ export default function HomePage() {
           imageWidth={350}
           imageHeight={320}
         />
-
         <ProductsCarousel
           carouselProductsData={productsImagesCarousal1}
           heading="Eid gifting essentials"

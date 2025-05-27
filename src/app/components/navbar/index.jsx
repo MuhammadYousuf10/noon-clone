@@ -20,6 +20,8 @@ const Navbar = () => {
     "Stationery",
     "Books & media",
     "Food",
+    "Drinks",
+    "Baby",
   ];
   const NextArrow = (props) => {
     const { className, onClick } = props;
@@ -51,8 +53,9 @@ const Navbar = () => {
     infinite: false,
     speed: 500,
     slidesToShow: 10,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     arrows: true,
+    variableWidth: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -69,7 +72,7 @@ const Navbar = () => {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
-          arrows: false,
+          arrows: true,
         },
       },
       {
@@ -89,9 +92,9 @@ const Navbar = () => {
           <div className="slider-wrapper">
             <div className="left-sec">
               <Slider {...settings}>
-                {categories?.map((cat, index) => (
-                  <div key={index}>
-                    <div className="slider-sec text-[17px] text-black font-semibold">
+                {categories.map((cat, index) => (
+                  <div key={index} style={{ width: "auto" }}>
+                    <div className="slider-sec text-[15px] text-black font-medium">
                       {cat}
                     </div>
                   </div>
