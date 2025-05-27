@@ -61,12 +61,6 @@ export default function HomePage() {
           variation={true}
         />
       </div>
-
-      {/* <HeroBanner />
-      <CategorySlider />
-      <FlashDeals />
-      <ProductCarousel title="Recommended for You" products={[]} />
-      <Footer /> */}
     </div>
   );
 }

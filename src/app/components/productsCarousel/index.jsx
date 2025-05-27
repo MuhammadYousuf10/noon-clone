@@ -60,7 +60,9 @@ const ProductsCarousel = ({
   return (
     <div className={`product-carousel-sec ${variation ? "sty-1" : ""}`}>
       <div className="head-sec">
-        <div className="text-[24px] font-bold text-black mb-4">{heading}</div>
+        <div className="text-[18px] sm:text-[22px] md:text-[24px] font-bold text-black mb-4">
+          {heading}
+        </div>
         {viewBtn && <button className="btn">View All</button>}
       </div>
       <Slider {...settings}>

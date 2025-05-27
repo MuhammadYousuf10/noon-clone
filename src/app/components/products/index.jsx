@@ -7,7 +7,9 @@ const Products = ({ heading, products, deal, column }) => {
     <Fragment>
       <div className={`products-sec ${column ? "sty-1" : ""}`}>
         <div className="head-sec">
-          <div className="text-[24px] font-bold text-black">{heading}</div>
+          <div className="text-[18px] sm:text-[22px] md:text-[24px] font-bold text-black">
+            {heading}
+          </div>
           {deal && <div className="tag">All Deals</div>}
         </div>
         <div className={`items-wrapper ${column ? "sty-1" : ""}`}>
