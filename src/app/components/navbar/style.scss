@@ -1,0 +1,58 @@
+.slider-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .left-sec {
+    max-width: 84%;
+    flex: 0 0 84%;
+    .slider-sec {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0 15px;
+    }
+  }
+
+  .right-sec {
+    max-width: 15%;
+    flex: 0 0 15%;
+  }
+
+  .slick-slider {
+    position: relative;
+
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+      }
+
+      &:before {
+        left: -10px;
+      }
+
+      &:after {
+        right: -10px;
+      }
+    }
+
+    .slick-prev {
+      left: -20px;
+    }
+
+    .slick-next {
+      right: -20px;
+    }
+  }
+}
