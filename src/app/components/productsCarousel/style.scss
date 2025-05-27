@@ -1,0 +1,100 @@
+.product-carousel-sec {
+  background-color: #fff;
+  padding: 15px;
+  &.sty-1{
+    background-color: #f4fbff;
+  }
+  .head-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .btn {
+      padding: 7.5px 15px;
+      text-transform: uppercase;
+      background-color: #fff;
+      border: 1px solid #000;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+  .slick-slider {
+    .custom-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #fafafa;
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+      width: 40px;
+      height: 40px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: #f7f7f7;
+        transform: translateY(-50%) scale(1.1);
+      }
+      img {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &.next {
+        right: 10px;
+      }
+      &.prev {
+        left: 10px;
+      }
+      &.slick-disabled {
+        background-color: #fafafa;
+        // cursor: not-allowed;
+        // box-shadow: none;
+        opacity: 0.35;
+      }
+    }
+    .slick-list {
+      .slick-track {
+        .slick-slide > div > div {
+          display: flex !important;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .slick-dots {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 4px;
+      background-color: #e0e0e0;
+      border-radius: 2px;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      display: block !important;
+      li {
+        display: none;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        // width: calc(100% / var(, 1));
+        background-color: #333;
+        border-radius: 2px;
+        // transform: translateX(calc(var(--dot-index, 0) * 100%));
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+}

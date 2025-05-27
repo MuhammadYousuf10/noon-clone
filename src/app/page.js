@@ -3,6 +3,13 @@ import Coupons from "./components/coupons";
 import Header from "./components/header";
 import HeroBanner from "./components/heroBanner";
 import Navbar from "./components/navbar";
+import Products from "./components/products";
+import ProductsCarousel from "./components/productsCarousel";
+import {
+  productSections,
+  productsImagesCarousal,
+  productsImagesCarousal1,
+} from "./data";
 
 export default function HomePage() {
   return (
@@ -13,6 +20,36 @@ export default function HomePage() {
         <Coupons />
         <HeroBanner />
         <CategoryIcons />
+        <div className="flex justify-around flex-wrap">
+          {productSections?.map((section) => (
+            <Products
+              key={section.id}
+              heading={section.heading}
+              products={section.products}
+              deal={section.deal}
+              column={section.column}
+            />
+          ))}
+        </div>
+        {/* <ProductsCarousel carouselProductsData={productsImagesCarousal} />
+        <ProductsCarousel carouselProductsData={productsImagesCarousal1} /> */}
+        <ProductsCarousel
+          carouselProductsData={productsImagesCarousal}
+          heading="Maximize your savings"
+          slidesToShow={4}
+          imageWidth={350}
+          imageHeight={320}
+        />
+
+        <ProductsCarousel
+          carouselProductsData={productsImagesCarousal1}
+          heading="Eid gifting essentials"
+          slidesToShow={7}
+          imageWidth={190}
+          imageHeight={320}
+          viewBtn={true}
+          variation={true}
+        />
       </div>
 
       {/* <HeroBanner />
